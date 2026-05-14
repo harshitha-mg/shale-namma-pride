@@ -1,0 +1,62 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    
+    function isSchoolAdmin(schoolId) {
+      return isSignedIn() && (
+        get(/databases/$(database)/documents/schools/$(schoolId)).data.adminUid == request.auth.uid
+      );
+    }
+    
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // SCHOOLS: Public browse, individual admin control
+    match /schools/{schoolId} {
+      allow read: if true;
+      allow create: if isSignedIn() && request.resource.data.adminUid == request.auth.uid;
+      allow update, delete: if isSignedIn() && (
+        resource.data.adminUid == request.auth.uid || 
+        resource.data.adminEmail == request.auth.token.email
+      );
+    }
+
+    // MEALS
+    match /meals/{mealId} {
+      allow read: if true;
+      allow write: if isSignedIn() && (
+        get(/databases/$(database)/documents/schools/$(request.resource.data.schoolId)).data.adminUid == request.auth.uid
+      );
+    }
+
+    // FACILITIES
+    match /facilities/{facilityId} {
+      allow read: if true;
+      allow create, update: if isSignedIn() && isSchoolAdmin(request.resource.data.schoolId);
+      allow delete: if isSignedIn() && isSchoolAdmin(resource.data.schoolId);
+    }
+
+    // STUDENTS
+    match /students/{studentId} {
+      allow read: if true;
+      allow create, update: if isSignedIn() && isSchoolAdmin(request.resource.data.schoolId);
+      allow delete: if isSignedIn() && isSchoolAdmin(resource.data.schoolId);
+    }
+
+    // FEEDBACK: Public write, School Admin read
+    match /feedback/{feedbackId} {
+      allow create: if isValidId(feedbackId);
+      allow read: if isSignedIn() && isSchoolAdmin(resource.data.schoolId);
+      allow delete: if isSignedIn() && isSchoolAdmin(resource.data.schoolId);
+    }
+  }
+}

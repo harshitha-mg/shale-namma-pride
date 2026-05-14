@@ -1,0 +1,15 @@
+{
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "runtime": "nodejs20"
+    }
+  ],
+  "firestore": [
+    {
+      "database": "ai-studio-63469dff-58db-465d-aead-0d809c39f872",
+      "rules": "firestore.rules"
+    }
+  ]
+}
