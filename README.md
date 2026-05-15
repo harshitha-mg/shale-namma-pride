@@ -84,7 +84,7 @@ This folder contains the native Android app built with Kotlin and Jetpack Compos
 
 # AI Features
 
-The admin portal includes two AI-assisted analysis tools.
+The admin portal includes two AI-assisted analysis tools. To access the admin portal select a school and click on the person icon at the top left in order to add, edit, or access AI analysis tools.
 
 ## 0. Translation Support
 - Parent/student feedback entered in English can be shown in Kannada when the app language is switched to Kannada
