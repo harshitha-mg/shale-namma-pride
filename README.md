@@ -147,7 +147,6 @@ Add this to `android/local.properties`:
 
 ```properties
 geminiApiKey=PASTE_YOUR_GOOGLE_AI_STUDIO_API_KEY_HERE
-geminiBackendUrl=
 ```
 
 ### Notes
