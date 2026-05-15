@@ -106,6 +106,26 @@ Shale Namma Pride helps schools build transparency, improve parent engagement, a
 </p>
 
 ---
+# Tech Stack
+
+  - Frontend Framework: Kotlin with Jetpack Compose for modern, declarative, and high-performance Android UI development
+  - Architecture: MVVM architecture for clean separation of UI, business logic, and data layers
+  - Backend Database: Firebase Firestore for real-time storage of meals, facilities, feedback, and student data
+  - Authentication: Firebase Authentication with Google Sign-In for secure and simple login system
+  - Cloud Storage: Firebase Storage for storing images such as meals, facilities, and student media
+  - AI Integration: Gemini Developer API for features like translation, nutrition analysis, and sentiment analysis
+  - Programming Language: Kotlin for safe, concise, and coroutine-supported Android development
+  - UI Design: Material 3 Design system for modern, responsive, and accessible interfaces
+  - State Management: Jetpack ViewModel + Compose State for lifecycle-aware and efficient UI state handling
+  - Navigation: Navigation Compose for smooth in-app screen transitions
+  - Asynchronous Processing: Kotlin Coroutines for handling background tasks and API calls efficiently
+  - Image Loading: Coil for lightweight and fast image loading in Compose UI
+  - PDF Generation: Android PDF APIs for generating downloadable AI analysis reports
+  - Localization: English and Kannada language support for bilingual user experience
+  - Build System: Gradle for dependency management and project build automation
+  - Development Environment: Android Studio as the official IDE for Android development
+
+---
 
 # AI Features
 
