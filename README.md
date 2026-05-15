@@ -147,6 +147,7 @@ Add this to `android/local.properties`:
 
 ```properties
 geminiApiKey=PASTE_YOUR_GOOGLE_AI_STUDIO_API_KEY_HERE
+geminiBackendUrl=
 ```
 
 ### Notes
@@ -205,3 +206,28 @@ These files should stay local:
 - Build outputs
 - APK/AAB files
 - Signing keys
+
+Development Progress & Local History
+
+This project was developed consistently over time with regular feature additions, UI improvements, Firebase integration, AI feature integration, translation support, and testing iterations.
+
+The following screenshots show Gradle build history and Android Studio local history snapshots captured during development.
+
+Gradle Build History
+<p align="center"> <img src="screenshots/Logs/Gradle build.png" width="800"/> </p>
+Android Studio Local History Snapshots
+Local History 1
+<p align="center"> <img src="screenshots/Logs/local_history_1.png" width="800"/> </p>
+Local History 2
+<p align="center"> <img src="screenshots/Logs/local_history_2.png" width="800"/> </p>
+Local History 3
+<p align="center"> <img src="screenshots/Logs/local_history_3.png" width="800"/> </p>
+Local History 4
+<p align="center"> <img src="screenshots/Logs/local_history_4.png" width="800"/> </p>
+Local History 5
+<p align="center"> <img src="screenshots/Logs/local_history_5.png" width="800"/> </p>
+Development Notes
+The app was developed incrementally with continuous testing and debugging.
+Local History screenshots demonstrate ongoing updates and iterative improvements throughout the project lifecycle.
+Gradle build logs confirm repeated successful builds and active development sessions.
+Features such as AI analysis, Firebase integration, multilingual support, PDF generation, and admin workflows were implemented and refined across multiple development stages.
