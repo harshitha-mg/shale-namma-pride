@@ -16,6 +16,31 @@ This folder contains the native Android app built with Kotlin and Jetpack Compos
 
 ---
 
+# Problem the App Solves
+
+Many government and rural schools struggle to provide parents and students with transparent, accessible, and regularly updated information about school activities, facilities, meals, and student achievements. Communication between schools and parents is often limited, feedback systems are unorganized, and language barriers make digital access difficult for Kannada-speaking users.
+
+The app addresses these challenges by providing a centralized bilingual digital platform for schools, parents, and students.
+
+## Key Problems Solved
+
+  - Improves communication between schools and parents/students
+  - Provides transparent daily meal updates and nutrition insights
+  - Digitizes school facility information and student achievements
+  - Enables structured feedback collection and management
+  - Supports both English and Kannada users
+  - Reduces language barriers using AI-assisted translation
+  - Helps administrators analyze meal quality and parent feedback using AI
+  - Creates a more engaging and informative school experience for parents and students
+  - Encourages digital adoption in school management workflows
+  - Provides data-driven insights through sentiment and nutrition analysis
+ 
+## Impact
+
+Shale Namma Pride helps schools build transparency, improve parent engagement, and make educational information more accessible through a modern Android application powered by Firebase, Jetpack Compose, and AI-assisted features.
+
+---
+
 # App Screenshots
 
 ## Homepage
@@ -207,13 +232,16 @@ These files should stay local:
 - APK/AAB files
 - Signing keys
 
-Development Progress & Local History
+---
+
+# Development Progress & Local History
 
 This project was developed consistently over time with regular feature additions, UI improvements, Firebase integration, AI feature integration, translation support, and testing iterations.
 
 The following screenshots show Gradle build history and Android Studio local history snapshots captured during development.
 
-Gradle Build History
+# Gradle Build History
+
 <p align="center"> <img src="screenshots/Logs/Gradle build.png" width="800"/> </p>
 Android Studio Local History Snapshots
 Local History 1
@@ -226,8 +254,12 @@ Local History 4
 <p align="center"> <img src="screenshots/Logs/local_history_4.png" width="800"/> </p>
 Local History 5
 <p align="center"> <img src="screenshots/Logs/local_history_5.png" width="800"/> </p>
-Development Notes
+
+# Development Notes
+
 The app was developed incrementally with continuous testing and debugging.
 Local History screenshots demonstrate ongoing updates and iterative improvements throughout the project lifecycle.
 Gradle build logs confirm repeated successful builds and active development sessions.
 Features such as AI analysis, Firebase integration, multilingual support, PDF generation, and admin workflows were implemented and refined across multiple development stages.
+
+---
